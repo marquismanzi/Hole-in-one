@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hole in One Golf Resort in Portugal offers world-class golf courses, luxury accommodations, and personalized packages.">
+    <title>Hole in One Golf Resort</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="web.js">
+</head>
+<body class="font-sans text-gray-800 bg-gray-100">
+    <!-- Accessibility Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="toggleContrast" class="bg-gray-800 text-white px-3 py-1 rounded hover:bg-gray-700" aria-label="Toggle high contrast mode">
+            High Contrast
+        </button>
+        <button id="toggleTextSize" class="bg-gray-800 text-white px-3 py-1 rounded hover:bg-gray-700 ml-2" aria-label="Toggle text size">
+            Larger Text
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header bg-green-600 text-white sticky top-0 z-40">
+        <nav class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0">
+            <a href="#home" class="flex items-center gap-3" aria-label="Hole in One home">
+                <!-- Inline logo -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" fill="#ffffff20" />
+                    <path d="M7 13c1.5-2 3.5-3 5-5 1.5 2 3.5 3 5 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <circle cx="12" cy="9" r="1.2" fill="#fff" />
+                </svg>
+                <h1 class="text-2xl font-serif">Hole in One</h1>
+            </a>
+            <button id="menuToggle" class="md:hidden focus:outline-none" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <ul id="navMenu" class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:underline" aria-current="page">Home</a></li>
+                <li><a href="#facilities" class="hover:underline">Facilities</a></li>
+                <li><a href="#packages" class="hover:underline">Packages</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+                <li><a href="#blog" class="hover:underline">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-green-600 text-white md:hidden">
+        <ul class="flex flex-col space-y-4 p-4">
+            <li><a href="#home" class="hover:underline">Home</a></li>
+            <li><a href="#facilities" class="hover:underline">Facilities</a></li>
+            <li><a href="#packages" class="hover:underline">Packages</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+            <li><a href="#blog" class="hover:underline">Blog</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-slider h-screen flex items-center justify-center text-white bg-black bg-opacity-50" style="background-image: url('https://images.unsplash.com/photo-1590692473604-69f3781f925f')">
+        <div class="text-center">
+            <h2 class="text-4xl md:text-6xl font-serif font-bold mb-4">Welcome to Hole in One Golf Resort</h2>
+            <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">Experience world-class golf, luxury accommodations, and fine dining in Portugal’s premier resort.</p>
+            <a href="#packages" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition" aria-label="Explore our golf and resort packages">Explore Packages</a>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-serif font-bold text-center mb-8">Our Facilities</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="https://images.unsplash.com/photo-1573053987865-2b6f828e6d70" alt="Sea View Championship Golf Course" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                <h3 class="text-xl font-semibold mb-2">Golf Courses</h3>
+                <p>Three championship courses, including the renowned Sea View course, designed for all skill levels.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Luxury Hotel Suite" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                <h3 class="text-xl font-semibold mb-2">Hotel Accommodation</h3>
+                <p>Luxury suites and rooms with stunning views, offering comfort and elegance.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Resort Restaurant" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                <h3 class="text-xl font-semibold mb-2">Restaurants & Café</h3>
+                <p>Fine dining and casual options, featuring local and international cuisine.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449" alt="Clubhouse Lounge Area" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                <h3 class="text-xl font-semibold mb-2">Clubhouses</h3>
+                <p>Two clubhouses offering relaxation, socializing, and stunning views of the resort.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Pro Shop Interior" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                <h3 class="text-xl font-semibold mb-2">Pro Shop</h3>
+                <p>Premium golf equipment, apparel, and accessories for all your needs.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="https://images.unsplash.com/photo-1590673846747-57fc4c989d2b" alt="Floodlit Driving Range" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                <h3 class="text-xl font-semibold mb-2">Other Activities</h3>
+                <p>Floodlit driving range, golf lessons, digital coaching, and caddie services.</p>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition" aria-label="Learn more about our facilities">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-center mb-8">Personalized Packages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="Five Rounds Package - Luxury Suite and Golf Course" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold mb-2">Five Rounds</h3>
+                    <p class="mb-4">Five night full board stay in a luxury suite, five 18-hole rounds, one guaranteed Sea View round, and complimentary digital coaching.</p>
+                    <p class="font-bold">From €2,500</p>
+                    <a href="#contact" class="block mt-4 text-blue-600 hover:underline" aria-label="Contact us about Five Rounds package">Contact for Details</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="https://images.unsplash.com/photo-1472343965509-9e2f5d6f3a55?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2" alt="Triple Tee Package - Golf Course with Buggy" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold mb-2">Triple Tee</h3>
+                    <p class="mb-4">Two night stay in a double room with breakfast, three 18-hole rounds (Sea View if available), complimentary buggy hire, 20% pro shop discount.</p>
+                    <p class="font-bold">From €1,200</p>
+                    <a href="#contact" class="block mt-4 text-blue-600 hover:underline" aria-label="Contact us about Triple Tee package">Contact for Details</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="https://images.unsplash.com/photo-1505691723518-36a2a0a1a3d0?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3" alt="Getaway Break Package - Resort Dining Area" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold mb-2">Getaway Break</h3>
+                    <p class="mb-4">Overnight stay with full breakfast, dinner in any restaurant, access to courses (excludes Sea View), complimentary club hire.</p>
+                    <p class="font-bold">From €500</p>
+                    <a href="#contact" class="block mt-4 text-blue-600 hover:underline" aria-label="Contact us about Getaway Break package">Contact for Details</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="https://images.unsplash.com/photo-1506015391300-4802dc5e8d61?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4" alt="Custom Corporate Package - Event Space" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold mb-2">Custom Packages</h3>
+                    <p class="mb-4">Tailored corporate events and extended stays, designed to meet your group’s needs.</p>
+                    <p class="font-bold">Contact for Pricing</p>
+                    <a href="#contact" class="block mt-4 text-blue-600 hover:underline" aria-label="Contact us about Custom Packages">Contact for Details</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5" alt="Couples Retreat Package - Romantic Golf Stay" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold mb-2">Couples Retreat</h3>
+                    <p class="mb-4">Romantic two-night stay with couples spa treatment, private sunset buggy tour, and a candlelit dinner for two.</p>
+                    <p class="font-bold">From €1,100</p>
+                    <a href="#contact" class="block mt-4 text-blue-600 hover:underline" aria-label="Contact us about Couples Retreat package">Contact for Details</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6" alt="Weekend Golf Intensive Package - Coaching and Range Time" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold mb-2">Weekend Intensive</h3>
+                    <p class="mb-4">Three-day coaching intensive with pro instruction, video analysis, unlimited range access and two rounds on the Sea View course.</p>
+                    <p class="font-bold">From €1,750</p>
+                    <a href="#contact" class="block mt-4 text-blue-600 hover:underline" aria-label="Contact us about Weekend Intensive package">Contact for Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-serif font-bold text-center mb-8">Contact Us</h2>
+        <form id="contactForm" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                <input type="text" id="name" name="name" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600" required aria-describedby="nameError">
+                <span id="nameError" class="text-red-600 text-sm hidden">Please enter your name.</span>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                <input type="email" id="email" name="email" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600" required aria-describedby="emailError">
+                <span id="emailError" class="text-red-600 text-sm hidden">Please enter a valid email.</span>
+            </div>
+            <div class="mb-4">
+                <label for="package" class="block text-sm font-medium mb-1">Package of Interest</label>
+                <select id="package" name="package" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600">
+                    <option value="">Select a package</option>
+                    <option value="five_rounds">Five Rounds</option>
+                    <option value="triple_tee">Triple Tee</option>
+                    <option value="getaway_break">Getaway Break</option>
+                    <option value="custom">Custom Package</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                <textarea id="message" name="message" rows="4" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600" aria-describedby="messageError"></textarea>
+                <span id="messageError" class="text-red-600 text-sm hidden">Please enter a message.</span>
+            </div>
+            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition w-full">Submit</button>
+        </form>
+        <div class="text-center mt-8">
+            <p>Or contact us via WhatsApp: <a href="https://wa.me/1234567890" class="text-blue-600 hover:underline" aria-label="Contact us via WhatsApp">+123 456 7890</a></p>
+            <p>Email: <a href="mailto:info@holeinone.pt" class="text-blue-600 hover:underline">info@holeinone.pt</a></p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-center mb-8">Blog & Tips</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="https://images.unsplash.com/photo-1540496905036-5937c7507174" alt="Golf Tips for Beginners" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold mb-2">Top Tips for Playing the Sea View Course</h3>
+                    <p>Learn how to navigate our famous course with expert advice for all skill levels.</p>
+                    <a href="#" class="block mt-4 text-blue-600 hover:underline" aria-label="Read more about Sea View course tips">Read More</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="https://images.unsplash.com/photo-1500932334442-8761ee4810a7" alt="Local Attractions in Portugal" class="w-full h-48 object-cover rounded-t-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold mb-2">Explore Portugal’s Algarve Region</h3>
+                    <p>Discover local attractions near Hole in One for a complete holiday experience.</p>
+                    <a href="#" class="block mt-4 text-blue-600 hover:underline" aria-label="Read more about Algarve attractions">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Hole in One Golf Resort. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://facebook.com" class="text-white hover:underline mx-2" aria-label="Visit our Facebook page">Facebook</a>
+                <a href="https://instagram.com" class="text-white hover:underline mx-2" aria-label="Visit our Instagram page">Instagram</a>
+                <a href="https://twitter.com" class="text-white hover:underline mx-2" aria-label="Visit our Twitter page">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="web.js"></script>
